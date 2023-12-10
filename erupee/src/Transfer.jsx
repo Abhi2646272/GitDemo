@@ -1,5 +1,7 @@
 // src/components/Transfer.js
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Transfer = ({ onTransfer }) => {
   const [amount, setAmount] = useState('');
@@ -9,7 +11,15 @@ const Transfer = ({ onTransfer }) => {
     // Simulate transfer action (replace with actual transfer logic)
     const transferAmount = parseFloat(amount);
     if (!isNaN(transferAmount) && transferAmount > 0 && recipient.trim() !== '') {
-      onTransfer(transferAmount, recipient);
+      // onTransfer(transferAmount, recipient);
+      toast.success(`Amount ${transferAmount} Transferred successfully.`, {
+        position: 'top-right',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
     } else {
       alert('Invalid amount or recipient');
     }
@@ -29,6 +39,7 @@ const Transfer = ({ onTransfer }) => {
       </label>
       <br />
       <button onClick={handleTransfer}>Transfer</button>
+      <ToastContainer />
     </div>
   );
 };

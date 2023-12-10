@@ -26,7 +26,7 @@ const Registration = ({ onRegister }) => {
       <br />
       <button onClick={handleRegister}>Register</button>
       <p>
-        Already have an account? <Link to="/login">Login here</Link>.
+        Already have an account? <Link to="/login" style={{color:'blue'}}>Login here</Link>.
       </p>
     </div>
   );

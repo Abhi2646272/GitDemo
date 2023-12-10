@@ -1,5 +1,8 @@
 // src/components/Withdraw.js
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+// import './Deposit.css';
 
 const Withdraw = ({ onWithdraw }) => {
   const [amount, setAmount] = useState('');
@@ -8,7 +11,14 @@ const Withdraw = ({ onWithdraw }) => {
     // Simulate withdraw action (replace with actual withdraw logic)
     const withdrawAmount = parseFloat(amount);
     if (!isNaN(withdrawAmount) && withdrawAmount > 0) {
-      onWithdraw(withdrawAmount);
+      toast.success(`Amount ${withdrawAmount} debited successfully.`, {
+        position: 'top-right',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
     } else {
       alert('Invalid amount');
     }
@@ -23,6 +33,7 @@ const Withdraw = ({ onWithdraw }) => {
       </label>
       <br />
       <button onClick={handleWithdraw}>Withdraw</button>
+      <ToastContainer />
     </div>
   );
 };

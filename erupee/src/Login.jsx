@@ -30,7 +30,7 @@ const Login = ({ onLogin }) => {
       <br />
       <button onClick={handleLogin}>Login</button>
       <p>
-        Don't have an account? <Link to="/register">Register here</Link>.
+        Don't have an account? <Link to="/register" style={{color:'blue'}}>Register here</Link>.
       </p>
     </div>
   );
