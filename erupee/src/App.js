@@ -8,6 +8,7 @@ import Withdraw from './Withdraw';
 import Transfer from './Transfer';
 import './App.css';
 import Navbar from './Navbar';
+import Home from './Home';
 
 const App = () => {
    
@@ -15,7 +16,7 @@ const App = () => {
     <Router>
       <Navbar/>
       <Routes>
-        <Route path='/' element={<Login/>}/>
+        <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Registration/>}/>
         <Route path='/deposit' element={<Deposit/>}/>
