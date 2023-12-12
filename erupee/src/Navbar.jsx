@@ -7,12 +7,7 @@ import './neumorphism.css';
 const Navbar = () => {
   
   return (
-    
-      
-
-
-      
-      
+ 
     <div className="nav-wrapper position-relative">
         <ul className="nav nav-pills nav-fill flex-column flex-sm-row">
           <li className="nav-item">
@@ -21,9 +16,7 @@ const Navbar = () => {
           <li className="nav-item">
             <NavLink className="nav-link mb-sm-3 mb-md-0" data-toggle="tab" to="/login">Login</NavLink>
           </li>
-          {/* <li className="nav-item">
-            <NavLink className="nav-link mb-sm-3 mb-md-0" data-toggle="tab" to="/register">Register</NavLink>
-          </li> */}
+ 
           <li className="nav-item">
             <NavLink className="nav-link mb-sm-3 mb-md-0" data-toggle="tab" to="/deposit">Deposit</NavLink>
           </li>
