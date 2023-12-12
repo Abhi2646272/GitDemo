@@ -1,0 +1,54 @@
+/* Navbar.css */
+nav {
+    background-color: #1e175c;
+    color: white;
+    padding: 10px;
+    border-radius: 16px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  #lname{color: rgb(163, 82, 27);}
+  #fname{color: white;}
+  #company{
+    /* font-family: 'Sofia', cursive; */
+    font-family: 'Teko', sans-serif;
+    font-size: 21px;
+    
+    height: 50px;
+    font-weight: bold;
+    color: rgb(247, 242, 242);
+  }
+  
+  li {
+    display: inline;
+     
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Style for the active link */
+  .active {
+    font-weight: bold;
+    margin-left: 20px;
+  }
+  
+  button{
+    background-color: rgb(15, 96, 16);
+    float: right;
+    border: none;
+    height: 40px;
+    width: 80px;
+    border-radius: 4px;
+    
+  }
+  button:hover{
+    background-color: rgb(17, 5, 82);
+    
+  }
+  
